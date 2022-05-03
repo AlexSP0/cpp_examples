@@ -9,6 +9,7 @@ CONFIG -= app_bundle
 
 SOURCES += \
         main.cpp
+        \lesson01_vector2d/vector2d.cpp
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin

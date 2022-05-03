@@ -4,6 +4,6 @@
 int main(int argc, char *argv[])
 {
     QCoreApplication a(argc, argv);
-
+    Vector2d vector(1,1);
     return a.exec();
 }

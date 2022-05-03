@@ -8,6 +8,7 @@ private:
 
 public:
     Vector2d(double x, double y);
+    Vector2d(const Vector2d &vector);
     virtual ~Vector2d();
 
     double vectorLength();
@@ -22,8 +23,8 @@ public:
     const Vector2d operator+(const Vector2d&);
     const Vector2d operator-(const Vector2d&);
 
-    void multipleSVector(double); //Скалярное произведение векторов
-    void multipleVecttor(Vector2d*); //Векторное произведение
+    void multipleSVector(const Vector2d&); //Скалярное произведение векторов
+    void multipleVector(Vector2d& v); //Векторное произведение
 
 
     double getX();

@@ -9,4 +9,4 @@ set(CMAKE_CXX_STANDART 14)
 set(SOURCES
    main.cpp)
 
-add_subdirectory(vector2d)
+add_subdirectory(lesson01_vector2d)

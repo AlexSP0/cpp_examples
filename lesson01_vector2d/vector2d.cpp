@@ -48,7 +48,7 @@ void Vector2d::multipleSVector(const Vector2d& v) {
     y=y*v.y;
 }
 
-void Vector2d::multipleVecttor(Vector2d& v) {
+void Vector2d::multipleVector(Vector2d& v) {
     v.normalize();
     x=x*v.getX();
     y=y*v.getY();
