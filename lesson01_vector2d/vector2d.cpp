@@ -11,6 +11,10 @@ Vector2d::Vector2d(const Vector2d &vector){
     y=vector.y;
 }
 
+Vector2d::~Vector2d() {
+
+}
+
 double Vector2d::vectorLength(){
     return sqrt(x*x+y*y);
 }
