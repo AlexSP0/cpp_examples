@@ -35,12 +35,14 @@ void Vector2d::normalize() {
     y = y / vectorLength();
 }
 
-const Vector2d Vector2d::operator+(const Vector2d& v) {
-    return new Vector2d(x+v.x, y+v.y);
+const Vector2d* Vector2d::operator+(const Vector2d& v) {
+    const Vector2d* cv = new Vector2d(x+v.x, y+v.y);
+    return cv;
 }
 
-const Vector2d Vector2d::operator-(const Vector2d& v) {
-    return new Vector2d(x-v.x, y-v.y);
+const Vector2d* Vector2d::operator-(const Vector2d& v) {
+    const Vector2d* cv = new Vector2d(x-v.x, y-v.y);
+    return cv;
 }
 
 void Vector2d::multipleSVector(const Vector2d& v) {

@@ -20,8 +20,8 @@ public:
 
     void normalize(); //Нормализация вектора
 
-    const Vector2d operator+(const Vector2d&);
-    const Vector2d operator-(const Vector2d&);
+    const Vector2d* operator+(const Vector2d&);
+    const Vector2d* operator-(const Vector2d&);
 
     void multipleSVector(const Vector2d&); //Скалярное произведение векторов
     void multipleVector(Vector2d& v); //Векторное произведение
