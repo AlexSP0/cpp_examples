@@ -13,18 +13,18 @@ public:
 
     double vectorLength();
 
-    void addScalar(double);  //Сложение со скаляром
-    void subScalar(double);  //Вычитание скаляра
-    void multipleScalar(double); //умножение на скаляр
-    void divScalar(double); //деление на скаляр
-
     void normalize(); //Нормализация вектора
 
     const Vector2d* operator+(const Vector2d&);
     const Vector2d* operator-(const Vector2d&);
 
-    void multipleSVector(const Vector2d&); //Скалярное произведение векторов
-    void multipleVector(Vector2d& v); //Векторное произведение
+    const Vector2d* operator+(double);
+    const Vector2d* operator-(double);
+    const Vector2d* operator*(double);
+    const Vector2d* operator/(double);
+
+    void Vector2d* multipleSVector(const Vector2d&); //Скалярное произведение векторов
+    void Vector2d* multipleVector(Vector2d& v); //Векторное произведение
 
 
     double getX();

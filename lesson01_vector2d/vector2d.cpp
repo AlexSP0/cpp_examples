@@ -16,27 +16,14 @@ Vector2d::~Vector2d() {
 }
 
 double Vector2d::vectorLength(){
-    return sqrt(x*x+y*y);
-}
-
-void Vector2d::addScalar(double s) {
-    x=x+s;
-    y=y+s;
-}
-
-void Vector2d::subScalar(double s) {
-    x=x-s;
-    y=y-s;
-}
-
-void Vector2d::multipleScalar(double s) {
-    x=x*s;
-    y=y*s;
+        return sqrt(x*x+y*y);
 }
 
 void Vector2d::normalize() {
-    x = x / vectorLength();
-    y = y / vectorLength();
+    if (vectorLength() != 0) {
+        x = x / vectorLength();
+        y = y / vectorLength();
+    }
 }
 
 const Vector2d* Vector2d::operator+(const Vector2d& v) {
@@ -49,15 +36,34 @@ const Vector2d* Vector2d::operator-(const Vector2d& v) {
     return cv;
 }
 
-void Vector2d::multipleSVector(const Vector2d& v) {
-    x=x*v.x;
-    y=y*v.y;
+const Vector2d* Vector2d::operator+(double s) {
+    x=x+s;
+    y=y+s;
 }
 
-void Vector2d::multipleVector(Vector2d& v) {
-    v.normalize();
-    x=x*v.getX();
-    y=y*v.getY();
+const Vector2d* Vector2d::operator-(double s) {
+    x=x-s;
+    y=y-s;
+}
+
+const Vector2d* Vector2d::operator*(double s) {
+    x=x*s;
+    y=y*s;
+}
+
+const Vector2d* Vector2d::operator/(double s) {
+    x=x/s;
+    y=y/s;
+}
+
+void Vector2d* Vector2d::multipleSVector(const Vector2d& v) {
+    const Vector2d* cv = new Vector2d(x * x.y, y * y.x);
+    return cv;
+}
+
+void Vector2d* Vector2d::multipleVector(Vector2d& v) {
+    const Vector2d* cv = new Vector2d(x * v.y, y * v.x);
+    return cv;
 }
 
 double Vector2d::getX() {
